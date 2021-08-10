@@ -1,0 +1,65 @@
+{% extends 'kaddapp/basic2.html' %} {% block body %}
+<!-- partial -->
+
+
+
+<div class="card">
+
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="card-title">Edit Profile</h4>
+            </div>
+        </div>
+        <form class="forms-sample" method="post" action="/kaddapp/editprofile/" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% if user.is_retailer %}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <h4 for="firstname">Company Name</h4>
+                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="" value="{{user.first_name}}" required>
+                    </div>
+                </div>
+            </div>
+            {% elif user.is_franchise %}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <h4 for="firstname">Franchise Name</h4>
+                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="" value="{{user.first_name}}" required>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <h4 for="firstname">First Name</h4>
+                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="" value="{{user.first_name}}" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <h4 for="lastname">Last Name</h4>
+                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="" value="{{user.last_name}}" required>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <h4 for="user_email">Email</h4>
+                        <input type="text" class="form-control" id="user_email" name="user_email" placeholder="" value="{{user.email}}" required>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success mr-2">Save Changes</button>
+        </form>
+    </div>
+</div>
+{% endblock body%}

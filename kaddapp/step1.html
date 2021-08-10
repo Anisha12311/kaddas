@@ -1,0 +1,52 @@
+{% extends 'kaddapp/basic2.html' %}{% load static %}
+{% block body %}
+<style>
+
+</style>
+
+<div class="container" style="margin-top:6%; margin-left: 35%;">
+    <form class="mt-4" method="POST" action="/kaddapp/step1/" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+
+            <h4>Select Package</h4>
+            <div class="input-group">
+                <input type="radio" name="package" value="basic" id="id_package" checked="true" />
+                <label for="id_package"><span><i class="material-icons">workspaces</i>Basic</span></label>
+                <input type="radio" name="package" value="premium" id="id_package" />
+                <label for="id_package"> <span><i class="material-icons">workspace_premium</i>Premium</span></label>
+            </div>
+
+
+            <h4 for="id_company_name">Business or Company Name</h4>
+            <div class="input-group input-group-icon">
+                <input type="text" name="company_name" maxlength="50" required id="id_company_name" placeholder="Company Name">
+                <div class="input-icon"><i class="material-icons">business</i></div>
+            </div>
+
+            <h4 for="id_phone">Mobile Number</h4>
+            <div class="input-group input-group-icon">
+                <input type="text" name="phone" maxlength="14" placeholder= "Please Enter mobile number entered during login." required id="id_phone">
+                <div class="input-icon"><i class="material-icons">phone</i></div>
+            </div>
+
+            <h4 for="id_logo_image">Company Logo</h4>
+            <div class="input-group input-group-icon">
+                <input type="file" name="logo_image" required id="id_logo_image">
+                <div class="input-icon"><i class="material-icons">add_a_photo</i></div>
+            </div>
+
+            <h4 for="id_cover_image">Cover Photo</h4>
+            <div class="input-group input-group-icon">
+                <input type="file" name="cover_image" required id="id_cover_image">
+                <div class="input-icon"><i class="material-icons">add_a_photo</i></div>
+            </div>
+
+
+
+        </div>
+        <button type="submit" class="submit">Submit & next</button>
+    </form>
+</div>
+
+{% endblock body %}

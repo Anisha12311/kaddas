@@ -1,0 +1,63 @@
+{% extends 'kaddapp/basic2.html' %} {% block body %}
+
+<div class="content-wrapper" style=" width:100%; ">
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="card-title"> My Transactions</h4>
+                </div>
+                <div class="col-md-6">
+                    <div style="float: right;">
+                        <a href="/kaddapp/payments/" class="btn btn-success btn-fw">Get more Codes</a>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <table id="vendor-listing" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Order Id </th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Activation code</th>
+                                    <th>Used codes</th>
+                                </tr>
+                                {% for i in transaction %}
+                                    {% if username == i.username_phone %}
+                                    <tr>
+                                        <th>{{i.order_id}}</th>
+                                        {% if i.paid %}
+                                            <th>Paid</th>
+                                        {% else %}
+                                            <th>Payment not Completed</th>
+                                        {% endif %}
+                                        
+                                        <th>{{i.date}}</th>
+                                        <th>{{i.activation_code}}</th> </th>
+                                        <th>{{i.used_codes}}</th>
+                                    </tr>
+                                    
+                                    {% endif %} 
+                                {% empty %}
+                                <li>Sorry, No cards found please Create One.</li>
+                                {% endfor %}
+                            </thead>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- content-wrapper ends -->
+{% endblock body %}

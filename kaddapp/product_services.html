@@ -1,0 +1,118 @@
+{% extends 'kaddapp/basic2.html' %} {% load static %}{% block body %}
+<link rel="stylesheet" href="{% static 'style1.css'%}">
+
+<div class="outer_box">
+    <div id="stepcontainer" class="stepcontainer">
+        <ul class="steps">
+            <li class="step step--complete step--inactive">
+                <div class="step-progress complete"></div>
+                <span class="step__icon"></span>
+                <span class="step__label">Personal Details</span>
+            </li>
+            <li class="step step--complete step--inactive">
+                <div class="step-progress complete"></div>
+                <span class="step__icon"></span>
+                <span class="step__label">Social Links</span>
+            </li>
+            <li class="step step--complete step--inactive">
+                <div class="step-progress complete"></div>
+                <span class="step__icon"></span>
+                <span class="step__label">Payment</span>
+            </li>
+            <li class="step step--incomplete step--active">
+                <div class="step-progress incomplete"></div>
+                <span class="step__icon"></span>
+                <span class="step__label">Services</span>
+            </li>
+            <li class="step step--incomplete step--inactive">
+                <div class="step-progress incomplete"></div>
+                <span class="step__icon"></span>
+                <span class="step__label">Gallery</span>
+            </li>
+            <li class="step step--incomplete step--inactive">
+                <div class="step-progress incomplete"></div>
+                <span class="step__icon"></span>
+                <span class="step__label">Select Theme</span>
+            </li>
+            <li class="step step--incomplete step--inactive">
+                <span class="step__icon"></span>
+                <span class="step__label">Preview</span>
+            </li>
+
+        </ul>
+    </div>
+    <div class="container">
+        <form action="/kaddapp/product_services/" method="post" enctype=multipart/form-data>
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-twothird">
+                    <h4 for="id_product_image">Upload Product Image #1</h4>
+                    <div class="input-group ">
+                        <input type="file" name="product_image" accept="image/*" required id="id_product_image">
+                    </div>
+                    <h4 for="id_product_name">Product Name</h4>
+                    <div class="input-group ">
+                        <input type="text" name="product_name" maxlength="30" placeholder="Product Name" required id="id_product_name">
+                    </div>
+                    <h4 for="id_mrp">MRP</h4>
+                    <div class="input-group ">
+                        <input type="text" placeholder="MRP of Product" name="mrp" maxlength="10" required id="id_mrp" />
+                    </div>
+
+                    <h4 for="id_product_image2">Upload Product Image #2</h4>
+                    <div class="input-group ">
+                        <input type="file" name="product_image2" accept="image/*" required id="id_product_image2">
+                    </div>
+                    <h4 for="id_product_name2">Product Name</h4>
+                    <div class="input-group ">
+                        <input type="text" name="product_name2" maxlength="30" placeholder="Product Name" required id="id_product_name2">
+                    </div>
+                    <h4 for="id_mrp2">MRP</h4>
+                    <div class="input-group ">
+                        <input type="text" placeholder="MRP of Product" name="mrp2" maxlength="10" required id="id_mrp2" />
+                    </div>
+
+                    <h4 for="id_product_image3">Upload Product Image #3</h4>
+                    <div class="input-group ">
+                        <input type="file" name="product_image3" accept="image/*"  id="id_product_image3">
+                    </div>
+                    <h4 for="id_product_name3">Product Name</h4>
+                    <div class="input-group ">
+                        <input type="text" name="product_name3" maxlength="30" placeholder="Product Name"  id="id_product_name3">
+                    </div>
+                    <h4 for="id_mrp3">MRP</h4>
+                    <div class="input-group ">
+                        <input type="text" placeholder="MRP of Product" name="mrp3" maxlength="10"  id="id_mrp3" />
+                    </div>
+
+                    <h4 for="id_product_image4">Upload Product Image #4</h4>
+                    <div class="input-group ">
+                        <input type="file" name="product_image4" accept="image/*" required id="id_product_image4">
+                    </div>
+                    <h4 for="id_product_name4">Product Name</h4>
+                    <div class="input-group ">
+                        <input type="text" name="product_name4" maxlength="30" placeholder="Product Name" required id="id_product_name4">
+                    </div>
+                    <h4 for="id_mrp4">MRP</h4>
+                    <div class="input-group ">
+                        <input type="text" placeholder="MRP of Product" name="mrp4" maxlength="10" required id="id_mrp4" />
+                    </div>
+
+                </div>
+            </div>
+            <input type="hidden" name="product" value={{sno}} required id="id_product">
+            <input type="hidden" name="mod" value={{sno}} required id="id_mod">
+
+            <button type="submit" class="skip">Submit & Next</button>
+        </form>
+
+    </div>
+</div>
+<div>
+
+</div>
+<!-- partial -->
+<script src="{% static 'script.js'%}"></script>
+<script src="{% static 'script2.js'%}"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+{% endblock body %}

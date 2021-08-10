@@ -1,0 +1,135 @@
+{% extends 'kaddapp/basic2.html' %} {% block body %}
+
+<div class="content-wrapper" style=" width:100%; ">
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="card-title">Digital Cards</h4>
+                </div>
+                <div class="col-md-6">
+                    <div style="float: right;">
+                        <a href="/kaddapp/step1" class="btn btn-success btn-fw">Create New Card</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row searchbar">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search" id="search_txt" />
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary" id="filter_btn">Filter</button>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <table id="vendor-listing" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Card ID</th>
+                                    <th>Company Name</th>
+                                    <th>Date</th>
+                                    <th>Card Status</th>
+                                    <th>Actions</th>
+                                    <th>Payment</th>
+                                </tr>
+                                {% for i in card %} {% if username == i.phone %}
+                                <tr>
+                                    <th>{{i.id}}</th>
+                                    <th>{{i.company_name}} </th>
+                                    <th>{{i.date}}</th>
+                                    {% if i.activecard %}
+                                    <th>Active</th>
+                                    {% else %}
+                                    <th>No active</th>
+                                    {% endif %}
+                                    <th>
+
+                                        <a href="/kaddapp/viewcard/{{i.id}}">
+                                            <button type="button" class="btn btn-outline-primary">View</button>
+                                        </a>
+                                        <a href="/kaddapp/deletecard/{{i.id}}">
+                                            <button type="button" class="btn btn-outline-danger">Delete</button></th>
+                                    </a>
+                                    {% if i.activecard %}
+                                    <th>Paid</th>
+                                    {% else %}
+                                    <th>
+                                        <a data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <button type="button" class="btn btn-outline-success">Activate now</button>
+                                        </a>
+                                    </th>
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header ">
+                                                    <h5 class="modal-title text-dark" id="exampleModalLabel">Activate Your Business Card Now!!!</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form class="mt-4" method="POST" action="/kaddapp/activate/">
+                                                        {% csrf_token %}
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <div class="form-group">
+                                                                    <label class="text-dark" for="name">Company name</label>
+                                                                    <input class="form-control" id="name" name="company_name" type="text" placeholder="Company name" value={{i.company_name}} disabled>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="form-group">
+                                                                    <br>
+                                                                    <label class="text-dark" for="pin">Enter Activation PIN</label>
+                                                                    <input class="form-control" id="pin" name="pin" placeholder="Enter pin">
+                                                                    <input id="card_id" name="card_id" hidden value={{i.id}}>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12 text-center my-2">
+                                                                <button type="submit" class="btn btn-block btn-dark">Activate</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="card">
+                                                    <h4 style="font-size:16px;" class="card-footer">
+                                                        Don't have activation pin ? <a href="/kaddapp/payments/" class="btn btn-primary">Click Here</a>
+                                                    </h4>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {% endif %}
+                                </tr>
+                                {% endif %} {% empty %}
+                                <li>Sorry, No cards found please Create One.</li>
+                                {% endfor %}
+
+                            </thead>
+                            <tbody>
+                                {% for message in messages %}
+                                <div class="alert alert-{{message.tags}} alert-dismissible fade show my-4" role="alert">
+                                    <strong>Message : </strong> {{message}}
+                                    <a type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ></a>
+                                </div>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- content-wrapper ends -->
+{% endblock body %}

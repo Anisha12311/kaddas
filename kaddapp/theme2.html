@@ -1,0 +1,540 @@
+{% load static %}
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Easy Fullscreen HTML5 Background Video</title>
+    <meta name="keywords" content="css3, html5, js, background video, fullscreen video">
+    <meta name="description" content="Super easy to implement HTML5 fullscreen background video library in JavaScript.">
+
+    <style>
+        #background_video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+           
+	    
+	        height: 100vh;
+	        
+            width: 100%;
+        }
+        
+        #video_cover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('/static/kaddapp/themeselect/video_cover.jpeg') no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        #video_controls {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+        
+        #play img {
+            width: 100px;
+        }
+        
+        #pause img {
+            width: 90px;
+        }
+        
+        #pause {
+            display: none;
+        }
+        
+        @media (min-width: 768px) {
+            #video_controls {
+                display: none;
+            }
+        }
+        /* Demo page specific styles */
+        
+        body {
+            text-align: center;
+            font-family: 'proxima-nova', Helvetica;
+        }
+        
+        #container {
+            height: 80%;
+        }
+        
+        #overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        #main_content {
+            z-index: 2;
+            position: relative;
+            display: inline-block;
+            /* Vertical center */
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        #main_content h1 {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-family: 'proxima-nova-condensed', Helvetica;
+            color: #fff;
+            font-size: 35px;
+        }
+        
+        #main_content .sub_head {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 18px;
+        }
+        
+        #main_content .info {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        
+        #links {
+            margin-top: 50px;
+        }
+        
+        #links a {
+            border: 2px solid rgba(255, 255, 255, 0.20);
+            border-radius: 61px;
+            font-size: 12px;
+            color: #FFFFFF;
+            letter-spacing: 1px;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 10px 25px;
+            display: inline-block;
+            margin-right: 15px;
+        }
+        
+    </style>
+
+    <script src="https://use.typekit.net/nlq1kdt.js"></script>
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+    </script>
+    <meta charset="UTF-8">
+    <title>View card</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.8/typicons.min.css'>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0a6aaa1a65.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/temp7.css'%}" />
+</head>
+
+<body>
+
+
+
+    <header id="header">
+        <video id="background_video" loop muted></video>
+        <div id="video_cover"></div>
+        <div id="overlay"></div>
+
+        <div class="title ">
+
+            <div class=" container">
+
+                <div class="card" id="homecover" style="background: url( '/media/{{backg}}'); #ffffff;background-repeat: no-repeat;
+            background-position: top;
+            background-size: auto 250px;  background-color: #1e222b;">
+                    <div id="home" class="home">
+                        <div class="logo">
+                            <img src="/media/{{img_data}}" />
+                        </div>
+                        <div class="overlay">
+                            <img src="{% static 'res/bground18.png'%}" />
+                        </div>
+                        <div class="company-info">
+                            <p>COMPANY</p>
+                            <p>{{com}}</p>
+                            <h2 style="color: white;">{{f_name}}{{l_name}}</h2>
+
+                        </div>
+                        <!-- contact details -->
+                        <div class="contact-btns">
+                            <a href="tel:{{what}}" target="_blank">
+                                <div class="cont_btn"><i class="fa fa-phone"></i><br> Call</div>
+                            </a>
+                            <a href="https://api.whatsapp.com/send?phone={{what}}&amp;text=Hi" target="_blank">
+                                <div class="cont_btn"><i class="fa fa-whatsapp"></i> <br>WhatsApp</div>
+                            </a>
+                            <a href="{{mail}}" target="_blank">
+                                <div class="cont_btn"><i class="fa fa-envelope"></i><br> Mail</div>
+                            </a>
+                            <a href="{{web}}" target="_blank">
+                                <div class="cont_btn"><i class="fa fa-globe"></i><br> Website</div>
+                            </a>
+                        </div>
+                        <div class="contact-details">
+                            <div class="contactbox">
+                                <i class="fa fa-phone"></i>
+                                <p class="justify-content-center align-self-center">
+                                    {{what}}
+                                </p>
+                            </div>
+                            <div class="contactbox">
+                                <i class="fa fa-envelope"></i>
+                                <p class="justify-content-center align-self-center">
+                                    {{mail}}
+                                </p>
+                            </div>
+                            <div class="contactbox">
+                                <i class="fa fa-map-marker"></i>
+                                <p class="justify-content-center align-self-center">
+                                    {{add}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="download-share-btns ">
+                            <a class="btn btn-success" data-toggle="modal" data-target="#myModal">Share </a>
+                            <a class="btn btn-success" href=" " download>Download Contact</a>
+                        </div>
+                        <div class="social-btns">
+                            <h3>Follow Us</h3>
+                            <div class="sharebtns">
+                                <ul>
+                                    <li><a href="{{facebook}}"><i style="background-color:#265B9D;" const style class="fa fa-facebook"></i></a></li>
+                                    <li><a href="{{instagram}}"><i style="background-color:#E33F7C;" const style class="fab fa-instagram"></i></a></li>
+                                    <li><a href="http://www.twitterlink.com"><i style="background-color:#00ABE3;" const style class="fab fa-twitter"></i></a></li>
+                                    <li><a href="http://www.linkedinlink.com"><i style="background-color:#007CBC;" const style class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="{{Youtube}}"><i style="background-color:#E22110;" const style class="fa fa-youtube"></i></a></li>
+                                    <li><a href="http://www.snaplink.com"><i style="background-color:#FFFC00;" const style class="fab fa-snapchat-ghost"></i></a></li>
+                                    <li><a href="http://www.pintink.com"><i style="background-color:#EF1C25;" const style class="fab fa-pinterest"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="activate">
+        <div class="card-body my-3">
+            <a class="btn btn-success mb-3" href="" style="background-color: #28a745;"> Activate Now </a>
+            <h5 class="card-title">Activate your digital Card</h5>
+            <p class="card-text">Without Activation your card can't work.</p>
+        </div>
+        <!--  <div class="card-footer text-muted">
+            Free Trial expired
+            </div> -->
+    </div>
+    <!-- about Section
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="about">
+        <div class="outer-box">
+
+            <h1>About Us</h1>
+            <div id="tsparticles"></div>
+            <div class="block"></div>
+            <div class="row about">
+                <p>{{about}}</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- services Section
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section id="services">
+        <div class="outer-box">
+            <h1>Products & Services</h1>
+            <div class="block"></div>
+            <div class="servicewrap">
+
+                <div class="row services">
+                    <div class="servicecard">
+
+                        <h5 class="card-title my-3 ">{{product_name}}
+
+                        </h5>
+                        <h5 class="card-title my-3 ">Id:{{product_id}}
+
+                        </h5>
+
+                        <img src="/media/{{ productimg }}" />
+
+
+                    </div>
+
+
+
+                    <h5>{{selling_price}}</h5>
+                    <form action="http://127.0.0.1:5000/place_order" method="POST">
+                        <input type="submit" name="submit" value="place_order">
+                    </form>
+                   
+                </div>
+            </div>
+
+    </section>
+    <section id="gallery">
+        <div id=hgallery class="outer-box gallery">
+            <h1>Gallery</h1>
+            <div class="block"></div>
+            <div class="slider">
+                <div class="slide_viewer">
+                    <div class="slide_group">
+                        <div class="slide" style="background-image:url('/media/{{ productimg }}'); object-fit:contain;">
+
+                        </div>
+                        <div class="slide" style="background-image:url('{% static 'res/cover.jpg'%}'); object-fit:contain;">
+
+                        </div>
+                        <div class="slide" style="background-image:url('/media/{{ productimg }}'); object-fit:contain;">
+                        </div>
+                        <div class="slide" style="background-image:url('{% static 'res/static/p1.png'%}'); object-fit:contain;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End // .slider -->
+            <div class="slide_buttons"></div>
+            <div class="directional_nav">
+                <div class="previous_btn" title="Previous">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
+                     <g>
+                        <g>
+                           <path fill="#474544" d="M-10.5,22.118C-10.5,4.132,4.133-10.5,22.118-10.5S54.736,4.132,54.736,22.118
+                              c0,17.985-14.633,32.618-32.618,32.618S-10.5,40.103-10.5,22.118z M-8.288,22.118c0,16.766,13.639,30.406,30.406,30.406 c16.765,0,30.405-13.641,30.405-30.406c0-16.766-13.641-30.406-30.405-30.406C5.35-8.288-8.288,5.352-8.288,22.118z"/>
+                           <path fill="#474544" d="M25.43,33.243L14.628,22.429c-0.433-0.432-0.433-1.132,0-1.564L25.43,10.051c0.432-0.432,1.132-0.432,1.563,0	c0.431,0.431,0.431,1.132,0,1.564L16.972,21.647l10.021,10.035c0.432,0.433,0.432,1.134,0,1.564	c-0.215,0.218-0.498,0.323-0.78,0.323C25.929,33.569,25.646,33.464,25.43,33.243z"/>
+                        </g>
+                     </g>
+                  </svg>
+                </div>
+                <div class="next_btn" title="Next">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
+                     <g>
+                        <g>
+                           <path fill="#474544" d="M22.118,54.736C4.132,54.736-10.5,40.103-10.5,22.118C-10.5,4.132,4.132-10.5,22.118-10.5	c17.985,0,32.618,14.632,32.618,32.618C54.736,40.103,40.103,54.736,22.118,54.736z M22.118-8.288	c-16.765,0-30.406,13.64-30.406,30.406c0,16.766,13.641,30.406,30.406,30.406c16.768,0,30.406-13.641,30.406-30.406 C52.524,5.352,38.885-8.288,22.118-8.288z"/>
+                           <path fill="#474544" d="M18.022,33.569c 0.282,0-0.566-0.105-0.781-0.323c-0.432-0.431-0.432-1.132,0-1.564l10.022-10.035 			L17.241,11.615c 0.431-0.432-0.431-1.133,0-1.564c0.432-0.432,1.132-0.432,1.564,0l10.803,10.814c0.433,0.432,0.433,1.132,0,1.564 L18.805,33.243C18.59,33.464,18.306,33.569,18.022,33.569z"/>
+                        </g>
+                     </g>
+                  </svg>
+                </div>
+            </div>
+            <!-- End // .directional_nav -->
+        </div>
+    </section>
+    <section id="payment">
+        <div class="outer-box">
+            <h1>Payment</h1>
+            <div class="block"></div>
+            <div class="wallet row">
+                <div class="bank_details mode">
+                    <h3 style="color:black;" class="text-center card-header">Bank Details</h3>
+                    <label class="" style="font-size:12px;">Bank Name: </label>
+                    <p style="font-size:15px; font-weight: 700;">SBI </p>
+                    <label style="font-size:12px;" class="">Account Holder Name: </label>
+                    <p style="font-size:19px; font-weight: 700;">
+
+                    </p>
+                    <label style="font-size:12px;" class="">Account Number: </label>
+                    <p style="font-size:15px; font-weight: 700;">
+
+                    </p>
+                    <label style="font-size:12px;" class="">IFSC Code: </label>
+                    <p style="font-size:15px; font-weight: 700;"> </p>
+                    <label style="font-size:12px;" class="">Account Type: </label>
+                    <p style="font-size:15px; font-weight: 700;">
+                        Current Account
+                    </p>
+                </div>
+                <!-- paytm -->
+                <div class="paytm mode">
+                    <h3 style="color:black;" class="text-center card-header">
+                        Paytm
+                    </h3>
+                    <div class="card-body">
+                        <label style="font-size:12px;" class="">Paytm Number: </label>
+                        <p style="font-size:19px; font-weight: 500;" class="card-text">
+
+                        </p>
+                        <img class="card-img-bottom" src="{% static 'res/static/paytm.jpg'%}">
+                    </div>
+                </div>
+                <!-- google pay -->
+                <div class="googlepay mode ">
+                    <h3 style="color:black;" class="text-center card-header">
+                        Google Pay
+                    </h3>
+                    <div class="card-body">
+                        <label style="font-size:12px;" class="">googlepay Number: </label>
+                        <p style="font-size:19px; font-weight: 500;" class="card-text">
+
+                        </p>
+                        <img class="card-img-bottom" src="{% static 'res/static/paytm.jpg'%}">
+                    </div>
+                </div>
+                <!--   phone pay   -->
+                <div class="phonepe mode ">
+                    <h3 style="color:black;" class="text-center card-header">
+                        PhonePe
+                    </h3>
+                    <div class="card-body">
+                        <label style="font-size:12px;" class="">PhonPe Number: </label>
+                        <p style="font-size:19px; font-weight: 500;" class="card-text">
+
+                        </p>
+                        <img class="card-img-bottom" src="{% static 'res/static/paytm.jpg'%}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="outer-box contact">
+            <h1>Contact</h1>
+            <form action="/kaddapp/theme1/" method="POST">
+                {% csrf_token %}
+                <div class="contactrow">
+                    <div class="half-column">
+                        <label for="RecipientInput">Name</label>
+                        <input class="u-full-width" type="text" name="cname">
+                    </div>
+                    <div class="half-column">
+                        <label for="EmailInput">Email</label>
+                        <input class="u-full-width" type="text" name="email">
+                    </div>
+                </div>
+                <div class="contactrow">
+                    <div class="half-column">
+                        <label for="phoneInput">Phone Number</label>
+                        <input class="u-full-width" type="text" name="phone">
+                        <input type="hidden" name="rmail" value="{{mail}}" </div>
+                    </div>
+                    <div class="contactrow">
+                        <label for="Message">Message</label>
+                        <textarea class="u-full-width" name="msg"></textarea>
+                        <input class="button-primary" type="submit" value="Submit">
+                    </div>
+            </form>
+            </div>
+    </section>
+    <footer>
+        <div class="outer-box">
+            <div class="nine columns">
+                <a href="https://eadds.me/" style="font-size:15px; color :#fff; text-decoration:none; width:100%;"> www.kadds.com|| Create your card now || 2021 </a>
+            </div>
+        </div>
+
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title" style="    font-size: 19px;">Share Digital Card</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body" id="OnlyDetailsBody">
+                        <ul class="popup_sharebtns">
+                            <li>
+                                <a href="https://api.whatsapp.com/send?text=https%3A%2F%2Feadds.me%2Fmmm-60c18f0d3caa2">
+                                    <div class="share_btn">
+                                        <i class="fab fa-whatsapp"></i>
+                                        <p>WhatsApp</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Feadds.me%2Fmmm-60c18f0d3caa2">
+                                    <div class="share_btn">
+                                        <i class="fab fa-facebook-f"></i>
+                                        <p>Facebook</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/intent/tweet?url=https://eadds.me/mmm-60c18f0d3caa2&text=">
+                                    <div class="share_btn">
+                                        <i class="fab fa-twitter"></i>
+                                        <p>Twitter</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://eadds.me/mmm-60c18f0d3caa2&title=&summary=&source=">
+                                    <div class="share_btn">
+                                        <i class="fab fa-linkedin-in"></i>
+                                        <p>Linkedin</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sms:?body=https://eadds.me/mmm-60c18f0d3caa2">
+                                    <div class="share_btn">
+                                        <i class="fas fa-sms"></i>
+                                        <p>SMS</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:?&subject=&body=https://eadds.me/mmm-60c18f0d3caa2 ">
+                                    <div class="share_btn">
+                                        <i class="fas fa-envelope"></i>
+                                        <p>Email</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'kaddapp/themeselect/bideo.js'%}"></script>
+    <script src="{% static 'kaddapp/themeselect/main.js'%}"></script>
+
+    <script>
+        if (window.location.host.indexOf('github.io') !== -1 && window.location.protocol !== "https:") {
+            window.location.protocol = "https";
+        }
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+    <script src="{% static 'js/script.js'%}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- partial -->
+    <script src="{% static 'res/static/gallery.js'%}"></script>
+    <!--<script  src="{% static 'res/static/effect.js'%}"></script>-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://www.wpromotions.eu/confetti.min.js"></script>
+    <script>
+        confetti.start()
+    </script>
+    <script>
+        setTimeout(function() {
+            confetti.stop();
+        }, 3000)
+    </script>
+</body>
+
+</html>

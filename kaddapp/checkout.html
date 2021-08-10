@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="https://eadds.me/uploads/1619579488.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Pizza Place | Digital Visiting Card Online</title>
+    <meta name="description" content="Gagan Malli (9178141 99237, 919988688094)">
+    <script src="https://kit.fontawesome.com/0a6aaa1a65.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://eadds.me/assets-main/css/checkout.css" />
+</head>
+
+<body>
+
+
+    <div class="mycontainer">
+
+        <div class="card " id="home">
+
+
+            <div class="container text-center">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="mt-3 mb-5">Order Details</h3>
+                        <div class="logo"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Quantity</th>
+                                                <th scope="col">Price</th>
+                                                <th>&nbsp;</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <strong>Your cart is empty !</strong> </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+
+
+    <script>
+        $(".item-delete").on('click', function() {
+            var myid = $(this).data('id');
+            console.log(myid);
+
+            $.ajax({
+                type: 'POST',
+                url: 'https://eadds.me/ecommerce/deleteitem/1219/' + myid,
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function(data) {
+                    location.reload();
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    alert("Some problem occurred, please try again.");
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

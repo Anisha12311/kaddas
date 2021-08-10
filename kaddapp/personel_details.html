@@ -1,0 +1,134 @@
+{% extends 'kaddapp/basic2.html' %} {% load static %}{% block body %}
+<link rel="stylesheet" href="{% static 'style1.css'%}">
+
+<style>
+
+</style>
+<div class="outer_box ">
+    <div id="stepcontainer" class="stepcontainer">
+        <ul class="steps">
+        <li class="step step--incomplete step--active">
+                <div class="step-progress incomplete"></div>
+                <span class="step__icon"></span>
+                <span class="step__label">Personal Details</span>
+            </li>
+            <li class="step step--incomplete step--inactive">
+                <div class="step-progress incomplete"></div>
+                <span class="step__icon"></span>
+                <span class="step__label">Social Links</span>
+            </li>
+            <li class="step step--incomplete step--inactive">
+                <div class="step-progress incomplete"></div>
+                <span class="step__icon"></span>
+                <span class="step__label">Payment</span>
+            </li>
+            <li class="step step--incomplete step--inactive">
+                <div class="step-progress incomplete"></div>
+                <span class="step__icon"></span>
+                <span class="step__label">Services</span>
+            </li>
+            <li class="step step--incomplete step--inactive">
+                <div class="step-progress incomplete"></div>
+                <span class="step__icon"></span>
+                <span class="step__label">Gallery</span>
+            </li>
+            <li class="step step--incomplete step--inactive">
+                <div class="step-progress incomplete"></div>
+                <span class="step__icon"></span>
+                <span class="step__label">Select Theme</span>
+            </li>
+            <li class="step step--incomplete step--inactive">
+                <span class="step__icon"></span>
+                <span class="step__label">Preview</span>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        {% csrf_token %}
+        <form action="/kaddapp/personel_details/" method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="input-group">
+                    <h6>Personal Details</h6>
+                </div>
+                <div class="input-group">
+                    <div class="col-half">
+                        <h4>First Name</h4>
+                        <input type="text" name="first_name" placeholder="Enter First Name" required />
+                        <input type="hidden" name="result" value={{id}} required />
+                    </div>
+                    <div class="col-half">
+                        <h4> Last Name</h4>
+                        <input type="text" name="last_name" placeholder="Enter Last Name"required />
+                    </div>
+                </div>
+                <div class="col-half">
+                    <h4>Position/Designation</h4>
+                    <input type="text" name="position" placeholder="Enter position or designation"required />
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                    <div class="col-half">
+                        <h4>Phone Number</h4>
+                        <input type="text" name="phone_number" placeholder="Enter Phone Number"required />
+                    </div>
+                    <div class="col-half">
+                        <h4> Alternate Phone Number</h4>
+                        <input type="text" name="alternate_phone" placeholder="Enter Phone Number "required />
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="col-half">
+                        <h4>Whatsapp No.</h4>
+                        <input type="text" name="whatsapp" placeholder="Enter Whatsapp Number"required />
+                    </div>
+                    <div class="col-half">
+                        <h4> Email Id</h4>
+                        <input type="text" name="email" placeholder="Enter Email id "required />
+                    </div>
+                </div>
+                <div class="input-group">
+                    <h4>Address</h4>
+                    <input type="text" name="address" placeholder="Full Adress"required />
+                </div>
+                <div class="input-group">
+
+                    <div class="col-half">
+                        <h4> Latitude</h4>
+                        <input type="text" name="latitude" placeholder="Latitude"required />
+                    </div>
+                    <div class="col-half">
+                        <h4> Longitude</h4>
+                        <input type="text" name="longitude" placeholder="Longitude"required />
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="col-half">
+                        <h4>Website</h4>
+                        <input type="text" name="website" placeholder="Your website"required />
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="col-half">
+                        <h4>Company Est. Date</h4>
+
+                        <input type="date" name="company_est_date" placeholder="Company Establishment Date"required />
+                    </div>
+                </div>
+                <div class="input-group">
+                    <h4>About Us</h4>
+                    <textarea type="text" rows="6" class="about" name="about" placeholder="About your Company or Business" required/></textarea>
+                </div>
+            </div>
+            
+            <button type="submit" class="skip">Submit & next</button>
+        </form>
+    </div>
+</div>
+<!-- partial -->
+<script src="{% static 'script.js'%}"></script>
+<script src="{% static 'script2.js'%}"></script>
+<script src="{% static 'sidebar.js'%}"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+{% endblock body%}

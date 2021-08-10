@@ -1,0 +1,97 @@
+ {% extends 'kaddapp/basic2.html' %} {% load static %}{% block body %}
+<link rel="stylesheet" href="{% static 'style1.css'%}">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="row ">
+                <div class="col-12 ">
+
+
+                    <div class="card mt-5 mb-3">
+                        <h3 class="card-header">
+                            Get Activation Pin
+                        </h3>
+                        <div class="card-body">
+                            <h4 class="card-title mt-5 mt-2">Step 1:</h4>
+                            <form class="forms-sample" method="post" action="/kaddapp/payments/" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="package">Package</label>
+                                            <select class="form-control" id="package" name="package" required>
+                                        <option value="">-:Select Package:-</option>
+                                        <option value="basic">Basic Package(₹{{basic}}) </option>
+                                        <option value="premium">Premium Package(₹{{premium}}) </option>
+                                    </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="name">Name</label>
+                                            <input type="text" class="form-control" value="{{first_name }}{{last_name}}" id="name" name="name" placeholder="Enter Name" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="phone_no">Phone Number</label>
+                                            <input type="text" class="form-control" value="{{username}}" id="phone_no" name="phone_no" placeholder="Enter phone number" required disabled>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <button type="submit" class="btn btn-success mr-2">Submit</button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <!-- RAZORPAY INTEGRATION HERE -->
+                    <div class="text-center mx-auto">
+                        {% if payment %}
+                        <form action="/kaddapp/success/" method="POST">
+                           <!-- <script 
+                            src="https://checkout.razorpay.com/v1/checkout.js" 
+                            data-key="rzp_test_9nmrK825fjo0Ym" 
+                            data-amount="{{payment.amount}}" 
+                            data-currency="INR" 
+                            data-order_id="{{payment.id}}" 
+                            data-buttontext="Pay with Razorpay" 
+                            data-name="Professials" 
+                            data-description="Django "
+                            data-image="https://example.com/your_logo.jpg" 
+                            data-prefill.name="PC" 
+                            data-prefill.email="parabvshubham@gmail.com" 
+                            data-theme.color="#F37254">
+                            </script>
+                            <input type="hidden" custom="Hidden Element" name="hidden">-->
+                            <script   src="https://checkout.razorpay.com/v1/checkout.js"
+                                data-key="rzp_test_WyK93y9mvps7SN"
+                                data-amount="{{payment.amount}}"
+                                data-name="Daft Punk"
+                                data-description="Purchase Description"
+                                data-image="vk.jpg"
+                                data-netbanking="true"
+                                data-description="Tron Legacy"
+                                data-prefill.name="Harshil Mathur"
+                                data-prefill.email="harshil@razorpay.com"
+                                data-prefill.contact="9999999999"
+                                data-notes.shopping_order_id="{{payment.id}}">
+                            </script>
+                            <input type="hidden" name="shopping_order_id" value="{{payment.id}}">
+
+                        </form>
+                        {% endif %}
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body%}

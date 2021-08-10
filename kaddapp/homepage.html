@@ -1,0 +1,798 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!--====== Title ======-->
+    <title>Home</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.png'%}" type="image/png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!--  <link rel="stylesheet" href="{% static 'navbar.css'%}%">-->
+
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css'%}">
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/LineIcons.2.0.css'%}">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.4.5.2.min.css'%}">
+
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/default.css'%}">
+
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/homestyle.css'%}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/main.css'%}">
+
+
+</head>
+
+<body>
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== HEADER PART START ======-->
+
+    <section class="header_area">
+        <div class="header_navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="">
+                                <img src="{% static 'assets/images/logo.png'%}" class="navlogo" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="#home">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#about">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#specs">Feature</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#pricing">Pricing</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#contact">Contact Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="btn btn-singin" href="/register/login">Login</a>
+
+                                        <li class="nav-item">
+                                            <a class="btn btn-singin" href="register/login_retailer">Retailer_Login</a>
+
+                                            <li class="nav-item">
+                                                <a class="btn btn-singin" href="/register/login_franchise">Francise_Login</a>
+                                            </li>
+                                </ul>
+                            </div>
+                            <!-- navbar collapse -->
+                        </nav>
+                        <!-- navbar -->
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- header navbar -->
+
+        <div id="home" class="header_hero d-lg-flex align-items-center">
+            <img class="shape shape-1" src="{% static 'assets/images/shape-1.svg'%}" alt="shape">
+            <img class="shape shape-2" src="{% static 'assets/images/shape-2.svg'%}" alt="shape">
+            <img class="shape shape-3" src="{% static 'assets/images/shape-3.svg'%}" alt="shape">
+
+            <div class="container heading">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="header_hero_content mt-45">
+                            <h2 class="header_title wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.2s">Get Your Personalized Digital Card</h2>
+                            <p class="wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.6s">We offer digital business card platform which is simple, convenient, and reliable. Create your card in Just 5 Minutes.</p>
+                            <ul>
+                                <li><a class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1s" href="/register/login">Create your card</a></li>
+                                <li><a class="main-btn main-btn-2 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.4s" href="/register/register">Register</a></li>
+                            </ul>
+                            <p style="color:#99c2ff;">No credit card required. Cancel anytime.</p>
+                        </div>
+                        <!-- header hero content -->
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+            <div class="header_image d-flex align-items-end">
+                <div class="image wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="1.8s">
+                    <img src="{% static 'assets/images/header_app.png'%}" alt="header App" style="width:80%;">
+                    <img src="{% static 'assets/images/dots.svg'%}" alt="dots" class="dots">
+                </div>
+                <!-- image -->
+            </div>
+            <!-- header image -->
+        </div>
+        <!-- header hero -->
+    </section>
+
+    <!--====== HEADER PART ENDS ======-->
+
+    <!--====== FEATURES PART START ======-->
+
+    <section id="features" class="features_area pt-35 pb-80">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-7 col-sm-8">
+                    <div class="single_features mt-30 features_1 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div class="features_icon">
+                            <img src="{% static 'assets/images/create.png'%}" class="lni lni-code" style="width:40%;"></img>
+                        </div>
+                        <div class="features_content">
+                            <h4 class="features_title">1. Create your card</h4>
+                            <p>Design your digital visiting card in 2 minutes.</p>
+                        </div>
+                    </div>
+                    <!-- single featuresow -->
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-8">
+                    <div class="single_features mt-30 features_2 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <div class="features_icon">
+                            <img src="{% static 'assets/images/link.png'%}" class="lni lni-layers" style="width:40%;"></img>
+                        </div>
+                        <div class="features_content">
+                            <h4 class="features_title">2. Save link</h4>
+                            <p>Digital Visiting Card is accessible anytime from anywhere</p>
+                        </div>
+                    </div>
+                    <!-- single featuresow -->
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-8">
+                    <div class="single_features mt-30 features_3 text-center wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.9s">
+                        <div class="features_icon">
+                            <img src="{% static 'assets/images/share.png'%}" class="lni lni-exit-down" style="width:40%;"></img>
+                        </div>
+                        <div class="features_content">
+                            <h4 class="features_title">3. Share with friends </h4>
+                            <p>Share your digital card with others through a variety of channels.</p>
+                        </div>
+                    </div>
+                    <!-- single featuresow -->
+                </div>
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </section>
+
+    <!--====== FEATURES PART ENDS ======-->
+
+    <!--====== ABOUT PART START ======-->
+
+    <section id="about" class="about_area pt-30 pb-80">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-9">
+                    <div class="about_image mt-50 wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <img class="image" src="{% static 'assets/images/about.png '%}" alt="about" style="width:60%">
+                        <img class="dots" src="{% static 'assets/images/dots.svg'%}" alt="dots">
+                    </div>
+                    <!-- about image -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="about_content mt-45 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <div class="section_title">
+                            <h4 class="title">MOTIVATE YOUR CUSTOMER DIGITALLY</h4>
+                            <p>Kadds has been offering the top-notch Digital Cards. With our Digital Business Card, you can easily design & share your contact information that has actionable mouse click like Call, Email, WhatsApp, Social Media Links, and
+                                many more. Our professionals are fully acquainted with the entire life cycle of digital card. With year of experience in IT industry, we understand the client's requirements as our individual & offer them the best solution
+                                available in terms of quality, cost and time.</p>
+                        </div>
+                        <a class="main-btn" href="/register/login">Create your card</a>
+
+                    </div>
+                    <!-- about image -->
+                </div>
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </section>
+
+    <!--====== ABOUT PART ENDS ======-->
+
+    <!--====== DOWNLOAD APP PART START ======-->
+
+    <section id="download" class="download_app_area pt-80 mb-80">
+        <div class="container">
+            <div class="download_app">
+                <div class="download_shape">
+                    <img src="{% static 'assets/images/shape-5.svg'%}" alt="shape">
+                </div>
+                <div class="download_shape_2">
+                    <img src="{% static 'assets/images/shape-6.png'%}" alt="shape">
+                </div>
+                <div class="download_app_content">
+                    <h3 class="download_title">Why Choose Digital Cards.</h3>
+                    <p>Printed cards make up a heap in a few months so it becomes hard to find when required. It might get misplaced too. A Survey shows printed cards handed out are thrown out in less than a week. These can be stopped by increasing the use
+                        of Digital Visiting cards. Below are the key benefits: <br><br> > Environment friendly
+                        <br>> Easy to Update & Access
+                        <br>> Great First Impression</p>
+
+                </div>
+                <!-- download app content -->
+            </div>
+            <!-- download app -->
+        </div>
+        <!-- container -->
+        <div class="download_app_image d-none d-lg-flex align-items-end">
+            <div class="image wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                <img src="{% static 'assets/images/download.png'%}" alt="download">
+            </div>
+            <!-- image -->
+        </div>
+        <!-- download app image -->
+
+    </section>
+
+    <!--====== DOWNLOAD APP PART ENDS ======-->
+
+
+
+    <!-- Cool Fetatures Section Start -->
+    <section id="specs" class="section">
+        <div class="container">
+            <!-- Start Row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="specs-text section-header text-center">
+                        <div>
+                            <h2 class="section-title">
+                                FEATURES THAT YOU NEED<br> FOR ALL YOUR BUSINESS NEEDS</h2>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End Row -->
+            <!-- Start Row -->
+            <div class="row featured-bg">
+                <!-- Start Col -->
+                <div class="col-lg-6 col-md-6 col-xs-12 p-0">
+                    <!-- Start Fetatures -->
+                    <div class="feature-item featured-border1">
+                        <div class="feature-icon float-left">
+                            <i class="material-icons">phone_in_talk</i>
+                        </div>
+                        <div class="feature-info float-left">
+                            <h4>CLICK TO CALL</h4>
+                            <p>
+                                Your clients will contact you by just <br>clicking on mobile number on Kadds.xyz.</p>
+                        </div>
+                    </div>
+                    <!-- End Fetatures -->
+                </div>
+                <!-- End Col -->
+
+                <!-- Start Col -->
+                <div class="col-lg-6 col-md-6 col-xs-12 p-0">
+                    <!-- Start Fetatures -->
+                    <div class="feature-item featured-border2">
+                        <div class="feature-icon float-left">
+                            <i class="lni lni-whatsapp"></i>
+                        </div>
+                        <div class="feature-info float-left">
+                            <h4>CLICK TO WHATSAPP</h4>
+                            <p>Your expectations can whatsapp you without even <br>saving your mobile number.</p>
+                        </div>
+                    </div>
+                    <!-- End Fetatures -->
+                </div>
+                <!-- End Col -->
+
+                <!-- Start Col -->
+                <div class="col-lg-6 col-md-6 col-xs-12 p-0">
+                    <!-- Start Fetatures -->
+                    <div class="feature-item featured-border1">
+                        <div class="feature-icon float-left">
+                            <i class="material-icons">email</i>
+                        </div>
+                        <div class="feature-info float-left">
+                            <h4>CLICK TO EMAIL</h4>
+                            <p>Your client will be able to send<br> you an email in a single click.</p>
+                        </div>
+                    </div>
+                    <!-- End Fetatures -->
+                </div>
+                <!-- End Col -->
+
+                <!-- Start Col -->
+                <div class="col-lg-6 col-md-6 col-xs-12 p-0">
+                    <!-- Start Fetatures -->
+                    <div class="feature-item featured-border2">
+                        <div class="feature-icon float-left">
+                            <i class="material-icons">language</i>
+                        </div>
+                        <div class="feature-info float-left">
+                            <h4>WEBSITE LINK</h4>
+                            <p>Clients can visit your website.</p>
+                        </div>
+                    </div>
+                    <!-- End Fetatures -->
+                </div>
+                <!-- End Col -->
+
+                <!-- Start Col -->
+                <div class="col-lg-6 col-md-6 col-xs-12 p-0">
+                    <!-- Start Fetatures -->
+                    <div class="feature-item featured-border3">
+                        <div class="feature-icon float-left">
+                            <i class="material-icons">location_on</i>
+                        </div>
+                        <div class="feature-info float-left">
+                            <h4>CLICK TO MAP</h4>
+                            <p>Customers can navigate to your office <br>with the help of Google Map.</p>
+                        </div>
+                    </div>
+                    <!-- End Fetatures -->
+                </div>
+                <!-- End Col -->
+
+                <!-- Start Col -->
+                <div class="col-lg-6 col-md-6 col-xs-12 p-0">
+                    <!-- Start Fetatures -->
+                    <div class="feature-item featured-border3">
+                        <div class="feature-icon float-left">
+                            <i class="material-icons">account_balance</i>
+                        </div>
+                        <div class="feature-info float-left">
+                            <h4>BANK DETAILS</h4>
+                            <p>
+                                One click and your client will be <br>able to view the bank details.</p>
+                        </div>
+                    </div>
+                    <!-- End Fetatures -->
+                </div>
+                <!-- End Col -->
+                <!-- Start Col -->
+                <div class="col-lg-6 col-md-6 col-xs-12 p-0">
+                    <!-- Start Fetatures -->
+                    <div class="feature-item featured-border4">
+                        <div class="feature-icon float-left">
+                            <i class="material-icons">facebook</i>
+                        </div>
+                        <div class="feature-info float-left">
+                            <h4>SOCIAL LINKS</h4>
+                            <p>
+                                Clients can visit your social sites profile.</p>
+                        </div>
+                    </div>
+                    <!-- End Fetatures -->
+                </div>
+                <!-- End Col -->
+                <!-- Start Col -->
+                <div class="col-lg-6 col-md-6 col-xs-12 p-0">
+                    <!-- Start Fetatures -->
+                    <div class="feature-item featured-border4">
+                        <div class="feature-icon float-left">
+                            <i class="material-icons">support_agent</i>
+                        </div>
+                        <div class="feature-info float-left">
+                            <h4>ROUND-THE-CLOCK SUPPORT</h4>
+                            <p>
+                                Round-the-clock support is available</p>
+                        </div>
+                    </div>
+                    <!-- End Fetatures -->
+                </div>
+                <!-- End Col -->
+
+
+            </div>
+            <!-- End Row -->
+        </div>
+    </section>
+    <!-- Cool Fetatures Section End -->
+
+
+    <!--====== APP FEATURES PART START ======-->
+
+    <section id="app_features">
+
+    </section>
+
+    <!--====== APP FEATURES PART ENDS ======-->
+
+    <!--====== VIDEO PART START ======-->
+
+
+
+    <!--====== PRICNG PART START ======-->
+
+    <section id="pricing" class="pricing_area mt-80 pt-75 pb-80">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center pb-25">
+                        <h4 class="title">Choose a Plan</h4>
+                        <p>Select a plan based on your needs.</p>
+                    </div>
+                    <!-- section title -->
+                </div>
+            </div>
+            <!-- row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-8 col-sm-10">
+                    <div class="single_pricing text-center pricing_color_1 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div class="pricing_top_bar">
+                            <h5 class="pricing_title">Startup</h5>
+                            <i class="lni lni-coffee-cup"></i>
+                            <span class="price">Free</span>
+                            <span class="validity">3 days</span>
+                        </div>
+                        <div class="pricing_list">
+                            <ul>
+                                <li>Products / Services</li>
+                                <li>Contact Person Name</li>
+                                <li>Contact Person Mobile No</li>
+                                <li>Contact Person Whatsapp No</li>
+                                <li>Business Name</li>
+                                <li>Business Logo
+                                    <li>
+                                        <li>Business Address
+                                            <li>
+                                                <li>Location (Map Link)</li>
+                                                <li>Business Contact No</li>
+                                                <li>Email ID</li>
+                                                <li>Enquiry Form</li>
+                                                <li>24X7 Support</li>
+                                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            </ul>
+                        </div>
+                        <div class="pricing_btn">
+                            <a href="/kaddapp/step1" class="main-btn main-btn-2">Get Started</a>
+                        </div>
+                    </div>
+                    <!-- single pricing -->
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-10">
+                    <div class="single_pricing text-center pricing_active pricing_color_2 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <div class="pricing_top_bar">
+                            <h5 class="pricing_title">Standard</h5>
+                            <i class="lni lni-diamond-alt"></i>
+
+                            <span class="price">₹ 1000</span>
+                            <span class="validity">1 year</span>
+                        </div>
+                        <div class="pricing_list">
+                            <ul>
+                                <li>Multiple Themes</li>
+                                <li>Products / Services</li>
+                                <li>Contact Person Name</li>
+                                <li>Contact Person Mobile No</li>
+                                <li>Contact Person Whatsapp No</li>
+                                <li>Business Name</li>
+                                <li>Business Logo
+                                    <li>
+                                        <li>Business Address
+                                            <li>
+                                                <li>Location (Map Link)</li>
+                                                <li>Business Contact No</li>
+                                                <li>Business Whatsapp No</li>
+                                                <li>Email ID</li>
+                                                <li>Enquiry Form</li>
+                                                <li>GST No</li>
+                                                <li>Bank Details</li>
+                                                <li>24X7 Support</li>
+                                                <br><br><br><br><br><br><br><br><br>
+                            </ul>
+                        </div>
+                        <div class="pricing_btn">
+                            <a href="/kaddapp/payments" class="main-btn">Get Started</a>
+                        </div>
+                    </div>
+                    <!-- single pricing -->
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-10">
+                    <div class="single_pricing text-center pricing_color_3 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                        <div class="pricing_top_bar">
+                            <h5 class="pricing_title">Premium</h5>
+                            <i class="lni lni-crown"></i>
+                            <span class="price">₹ 2000</span>
+                            <span class="validity">2 year</span>
+                        </div>
+                        <div class="pricing_list">
+                            <ul>
+                                <li>Multiple Themes</li>
+                                <li>Products / Services</li>
+                                <li>Payment Methods</li>
+                                <li>Photo Gallery</li>
+                                <li>Social Media Links</li>
+                                <li>Brochure / Catalog</li>
+                                <li>Contact Person Name</li>
+                                <li>Contact Person Mobile No</li>
+                                <li>Contact Person Whatsapp No</li>
+                                <li>Business Name</li>
+                                <li>Business Logo
+                                    <li>
+                                        <li>Business Address
+                                            <li>
+                                                <li>Location (Map Link)</li>
+                                                <li>Business Contact No</li>
+                                                <li>Business Whatsapp No</li>
+                                                <li>Email ID</li>
+                                                <li>Website Link</li>
+                                                <li>Enquiry Form</li>
+                                                <li>GST No</li>
+                                                <li>Bank Details</li>
+                                                <li>24X7 Support</li>
+                            </ul>
+                        </div>
+                        <div class="pricing_btn">
+                            <a href="/kaddapp/payments" class="main-btn main-btn-2">Get Started</a>
+                        </div>
+                    </div>
+                    <!-- single pricing -->
+                </div>
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </section>
+
+    <!--====== PRICNG PART ENDS ======-->
+
+
+
+
+
+    <!--====== FOOTER PART START ======-->
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="section pt-35 pb-80">
+        <!-- Container Starts -->
+        <div class="container">
+            <!-- Start Row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="contact-text section-header text-center">
+                        <div>
+                            <h2 class="section-title">Any Questions ? Contact Us</h2>
+                            <div class="desc-text">
+                                <p>Fill in the form below to send us your query.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End Row -->
+            <!-- Start Row -->
+            <div class="row">
+                <!-- Start Col -->
+                <div class="col-lg-6 col-md-12">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required data-error="Please enter your name">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Company Name" id="company" class="form-control" name="company" required data-error="Please enter your name of your company">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="Email" required data-error="Please enter your Email">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Phone Number" id="budget" class="form-control" name="phone no" required data-error="Please enter your phone number">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="message" name="message" placeholder="Write Message" rows="4" data-error="Write your message" required></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="submit-button">
+                                    <button class="btn btn-common" id="submit" type="submit">Submit</button>
+                                    <div id="msgSubmit" class="h3 hidden"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- End Col -->
+                <!-- Start Col -->
+                <div class="col-lg-1">
+
+                </div>
+                <!-- End Col -->
+                <!-- Start Col -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="contact-img">
+                        <img src="{% static 'assets/images/01.png '%}" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <!-- End Col -->
+                <!-- Start Col -->
+                <div class="col-lg-1">
+                </div>
+                <!-- End Col -->
+
+            </div>
+            <!-- End Row -->
+        </div>
+    </section>
+    <!-- Contact Us Section End -->
+
+    <!-- Footer Section Start -->
+    <footer>
+        <!-- Footer Area Start -->
+        <section id="footer-Content">
+            <div class="container">
+                <!-- Start Row -->
+                <div class="row">
+
+                    <!-- Start Col -->
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+
+                        <div class="footer-logo">
+                            <img src="{% static 'assets/images/logowhite.png'%}" alt="">
+                        </div>
+                    </div>
+                    <!-- End Col -->
+                    <!-- Start Col -->
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+                        <div class="widget">
+                            <h3 class="block-title">Quick Links</h3>
+                            <ul class="menu">
+                                <li><a href="#home">  - Home</a></li>
+                                <li><a href="#about">  - About Us</a></li>
+                                <li><a href="#specs">- Features</a></li>
+                                <li><a href="#pricing">- Pricing</a></li>
+                                <li><a href="#contact">- Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Col -->
+                    <!-- Start Col -->
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+                        <div class="widget">
+
+                        </div>
+                    </div>
+                    <!-- End Col -->
+                    <!-- Start Col -->
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+                        <div class="widget">
+
+                        </div>
+                    </div>
+                    <!-- End Col -->
+                    <!-- Start Col -->
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+                        <div class="widget">
+                            <h3 class="block-title">Contact Us</h3>
+                            <p>Kadds Digital<br>First Mall<br>Upstairs HDFC Bank<br>Mall Road,Fountain Chowk<br> Ludhiana-141001<br><i class="material-icons footericon">phone_in_talk</i> +91-9888244551,<br>0161-5022251</p>
+                        </div>
+                    </div>
+                    <!-- End Col -->
+                </div>
+                <!-- End Row -->
+            </div>
+            <!-- Copyright Start  -->
+
+            <div class="copyright">
+                <div class="container">
+                    <!-- Star Row -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="site-info text-center">
+                                <p>Copyrighted by <a href="https://eadds.me/" rel="nofollow">Kaads</a></p>
+                            </div>
+
+                        </div>
+                        <!-- End Col -->
+                    </div>
+                    <!-- End Row -->
+                </div>
+            </div>
+            <!-- Copyright End -->
+        </section>
+        <!-- Footer area End -->
+
+    </footer>
+    <!-- Footer Section End -->
+
+    <!--====== FOOTER PART ENDS ======-->
+
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->
+
+    <!--====== PART START ======-->
+
+    <!--
+    <section class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+
+    <!--====== PART ENDS ======-->
+
+
+
+
+
+    <!--====== Jquery js ======-->
+    <script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js'%}"></script>
+    <script src="{% static 'assets/js/vendor/modernizr-3.7.1.min.js'%}"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="{% static 'assets/js/popper.min.js'%}"></script>
+    <script src="{% static 'assets/js/bootstrap.4.5.2.min.js'%}"></script>
+
+
+    <!--====== Scrolling Nav js ======-->
+    <script src="{% static 'assets/js/jquery.easing.min.js'%}"></script>
+    <script src="{% static 'assets/js/scrolling-nav.js'%}"></script>
+
+    <!--====== wow js ======-->
+    <script src="{% static 'assets/js/wow.min.js'%}"></script>
+
+    <!--====== Main js ======-->
+    <script src="{% static 'assets/js/main.js'%}"></script>
+
+</body>
+
+</html>
