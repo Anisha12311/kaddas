@@ -20,7 +20,7 @@
     <meta name="description" content="Gurvinder Pal Singh (919646323134, 919780749271)">
 
     <script src="https://kit.fontawesome.com/0a6aaa1a65.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% static 'css/malldesigntheme.css'% }" />
+    <link rel="stylesheet" href="{% static 'css/malldesigntheme10.css'% }" />
 
     <style>
         .addtocartdiv{
@@ -207,7 +207,8 @@
                                     <input type="hidden" name="hidden_price" value="1000">
                                     <input type="hidden" name="hidden_image" value="WhatsApp_Image_2021-03-09_at_3_59_16_PM.jpeg">
                                     <input type="hidden" name="hidden_name" value="Birthday Cake">
-                                     <button type="submit"  class="AddCart" style="font-size:14px;" >Add To Cart</button>
+                                    <span id="divpr1" class="divpr"> 
+                                    <button type="submit"  id= "pr1" class="AddCart" style="font-size:14px;" >Add To Cart</button></span>
                                 </form>
                                 <!-- href="" -->
                             </div>
@@ -226,8 +227,8 @@
                                 </div>
                                 <form action="https://eadds.me/ecommerce/index/703/716" method="POST">
                                    
-     
-                                     <button type="submit"  class="AddCart" style="font-size:14px;" >Add To Cart</button>
+                                    <span id="divpr2" class="divpr">
+                                     <button type="submit"  id= "pr2" class="AddCart" style="font-size:14px;" >Add To Cart</button></span>
                                 </form>
                                 <!-- href="" -->
                             </div>
@@ -245,10 +246,10 @@
                                     <h5 class="card-title"  id="namepr3">{{productd.product_name3}}</h5>
                                     <p class="card-text">₹<span id="pricepr3">{{productd.mrp3}}</span></p>
                                 </div>
-                                <form action="https://eadds.me/ecommerce/index/703/717" method="POST">
+                                <f action="https://eadds.me/ecommerce/index/703/717" method="POST">
                                   
-   
-                                     <button type="submit"  class="AddCart" style="font-size:14px;" >Add To Cart</button>
+                                    <span id="divpr3" class="divpr">
+                                     <button type="submit"  id= "pr3" class="AddCart" style="font-size:14px;" >Add To Cart</button></span>
                                 </form>
                                 <!-- href="" -->
                             </div>
@@ -271,7 +272,8 @@
                                     <input type="hidden" name="hidden_price" value="35">
                                     <input type="hidden" name="hidden_image" value="WhatsApp_Image_2021-03-09_at_3_48_15_PM.jpeg">
                                     <input type="hidden" name="hidden_name" value="Kulcha Bread">
-                                     <button type="submit"  class="AddCart" style="font-size:14px;" >Add To Cart</button>
+                                    <span id="divpr4" class="divpr"> 
+                                    <button type="submit" id= "pr4" class="AddCart" style="font-size:14px;" >Add To Cart</button></span>
                                 </form>
                                 <!-- href="" -->
                             </div>
@@ -368,7 +370,7 @@
                                 <p style="font-size:19px; font-weight: 500;" class="card-text">
                                     {{paymentd.paytm_num}}</p>
                                 <img class="card-img-bottom"
-                                    src="https://eadds.me/uploads/WhatsApp_Image_2021-03-0PM.jpeg">
+                                    src="/media/{{paymentd.paytm_qr}}">
                             </div>
                         </div>
                     
@@ -382,7 +384,7 @@
                                 <p style="font-size:19px; font-weight: 500;" class="card-text">
                                     {{paymentd.gpay_num}}</p>
                                 <img class="card-img-bottom"
-                                    src="https://eadds.me/uploads/WhatsApp_Image_2021-03-09_at_3_55_08_PM.jpeg">
+                                    src="/media/{{paymentd.gpay_qr}}">
                             </div>
                         </div>
                                             <!--   phone pay   -->
@@ -395,7 +397,7 @@
                                 <p style="font-size:19px; font-weight: 500;" class="card-text">
                                     {{paymentd.phonepe_num}}</p>
                                 <img class="card-img-bottom"
-                                    src="https://eadds.me/uploads/PhonePe-QR-Code-merchant-sample-121.jpg">
+                                    src="/media/{{paymentd.phonepe_qr}}">
                             </div>
                         </div>
                     
