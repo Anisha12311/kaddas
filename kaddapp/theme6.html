@@ -171,49 +171,39 @@
 
    <div class = "product_container">
        <div class = "p-box">
-           <img src = "/media/{{productd.product_image}}">
-           
+        <img  src="/media/{{productd.product_image}}" alt="">
+        <h5 class="card-title"  id="namepr1">{{productd.product_name}}</h5>
            <p class="card-text">₹<span id="pricepr1">{{productd.mrp}}</span></p>
-           <a href="#" class = "Cart">Add To Cart</a>
+           <span id="divpr1" class="divpr">
+           <a href="#" class = "Cart">Add To Cart</a></span>
        </div>
 
 
        <div class = "p-box">
         <img src = "/media/{{productd.product_image2}}">
-     
+        <h5 class="card-title"  id="namepr2">{{productd.product_name2}}</h5>
         <p class="card-text">₹<span id="pricepr2">{{productd.mrp2}}</span></p>
-        <a href="#" class = "Cart">Add To Cart</a>
+        <span id="divpr2" class="divpr">
+        <a href="#" class = "Cart">Add To Cart</a></span>
     </div>
 
     <div class = "p-box">
         <img src = "/media/{{productd.product_image3}}">
-      
+        <h5 class="card-title"  id="namepr3">{{productd.product_name3}}</h5>
         <p class="card-text">₹<span id="pricepr3">{{productd.mrp3}}</span></p>
-        <a href="#" class = "Cart">Add To Cart</a>
+        <span id="divpr3" class="divpr">
+        <a href="#" class = "Cart">Add To Cart</a></span>
     </div>
 
     <div class = "p-box">
         <img src = "/media/{{productd.product_image4}}">
-     
+        <h5 class="card-title"  id="namepr4">{{productd.product_name4}}</h5>
         <p class="card-text">₹<span id="pricepr4">{{productd.mrp4}}</span></p>
-        <a href="#" class = "Cart">Add To Cart</a>
+        <span id="divpr4" class="divpr">
+        <a href="#" class = "Cart">Add To Cart</a></span>
     </div>
 
-    <div class = "p-box">
-        <img src = "/media/{{productd.product_image1}}">
-     
-        <p class="card-text">₹<span id="pricepr5">{{productd.mrp5}}</span></p>
-        <a href="#" class = "Cart">Add To Cart</a>
-    </div>
-
-    <div class = "p-box">
-        <img src = "/media/{{productd.product_image2}}">
-       
-        <p class="card-text">₹<span id="pricepr6">{{productd.mrp}}</span></p>
-        <a href="#" class = "Cart">Add To Cart</a>
-    </div>
-   
-
+    
    </div>
 
 </section>
@@ -229,7 +219,7 @@
         <h3 >Payment</h3>
         <div class = "dis" style = "display: flex;">
         <div  class = "Payment">
-                    <img src = "images/qr.JPG" alt = "" class = "google">
+                    <img src = "/media/{{paymentd.paytm_qr}}" alt = "" class = "google">
                   </div>
 
                   <div class="bank">
