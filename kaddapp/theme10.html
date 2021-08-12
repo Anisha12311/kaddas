@@ -199,17 +199,10 @@
                                 <div class = "Title1" >
                                     <h5 class="card-title"  id="namepr1">{{productd.product_name}}</h5>
                                     <p class="card-text">₹<span id="pricepr1">{{productd.mrp}}</span></p>
-                          
-                               
-                            </div>
-                                <form action="https://eadds.me/ecommerce/index/703/715" method="POST">
-                                    
-                                    <input type="hidden" name="hidden_price" value="1000">
-                                    <input type="hidden" name="hidden_image" value="WhatsApp_Image_2021-03-09_at_3_59_16_PM.jpeg">
-                                    <input type="hidden" name="hidden_name" value="Birthday Cake">
-                                    <span id="divpr1" class="divpr"> 
+                                </div>
+                                <span id="divpr1" class="divpr"> 
                                     <button type="submit"  id= "pr1" class="AddCart" style="font-size:14px;" >Add To Cart</button></span>
-                                </form>
+                             
                                 <!-- href="" -->
                             </div>
                         </div>
@@ -221,15 +214,12 @@
                                 alt="">
                             <div class="card-body text-center">
                                 <div class = "Title1" >
-                          
                                     <h5 class="card-title"  id="namepr2">{{productd.product_name2}}</h5>
                                     <p class="card-text">₹<span id="pricepr2">{{productd.mrp2}}</span></p>
                                 </div>
-                                <form action="https://eadds.me/ecommerce/index/703/716" method="POST">
-                                   
-                                    <span id="divpr2" class="divpr">
+                                     <span id="divpr2" class="divpr">
                                      <button type="submit"  id= "pr2" class="AddCart" style="font-size:14px;" >Add To Cart</button></span>
-                                </form>
+                            
                                 <!-- href="" -->
                             </div>
                         </div>
@@ -241,16 +231,12 @@
                                 alt="">
                             <div class="card-body text-center">
                                 <div class = "Title1" >
-                       
-                                
                                     <h5 class="card-title"  id="namepr3">{{productd.product_name3}}</h5>
                                     <p class="card-text">₹<span id="pricepr3">{{productd.mrp3}}</span></p>
                                 </div>
-                                <f action="https://eadds.me/ecommerce/index/703/717" method="POST">
-                                  
-                                    <span id="divpr3" class="divpr">
+                                     <span id="divpr3" class="divpr">
                                      <button type="submit"  id= "pr3" class="AddCart" style="font-size:14px;" >Add To Cart</button></span>
-                                </form>
+                               
                                 <!-- href="" -->
                             </div>
                         </div>
@@ -262,19 +248,12 @@
                                 alt="">
                             <div class="card-body text-center">
                                 <div class = "Title1" >
-                          
-                                
                                     <h5 class="card-title"  id="namepr4">{{productd.product_name4}}</h5>
                                     <p class="card-text">₹<span id="pricepr4">{{productd.mrp4}}</span></p>
                                 </div>
-                                <form action="https://eadds.me/ecommerce/index/703/718" method="POST">
-                                  
-                                    <input type="hidden" name="hidden_price" value="35">
-                                    <input type="hidden" name="hidden_image" value="WhatsApp_Image_2021-03-09_at_3_48_15_PM.jpeg">
-                                    <input type="hidden" name="hidden_name" value="Kulcha Bread">
                                     <span id="divpr4" class="divpr"> 
                                     <button type="submit" id= "pr4" class="AddCart" style="font-size:14px;" >Add To Cart</button></span>
-                                </form>
+                             
                                 <!-- href="" -->
                             </div>
                         </div>
@@ -442,7 +421,6 @@
                         <button type="submit" class="btn mb-3" style="width:100%;background-color: rgb(32, 32, 32);
     color: white;">Send</button>
                     </form>
-
                 </div>
 
 
@@ -451,25 +429,27 @@
             <!-- ads -->
             
         </div>
-
-
-   
-
-    </div>
-
-        <!--  php resuable functions -->
-        
-       
-           <div>
+ </div><div>
             </div>
 
+            <div>
+                <!--<a href="https://eadds.me/ecommerce/orderdetails/1219" class="cart-round-button">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge badge-light text-dark" style="position: absolute;top: -2px;right: -2px;" ></span>
+                </a>-->
+                <a type="button" class="cart-round-button" id="popcart"  data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="Your Cart is Empty">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="AddCart" class="badge badge-light text-dark" style="position: absolute;top: -2px;right: -2px;"></span>
+                    </a> 
+                <!-- <span></span> -->
+            </div>
 <div class="menu_bottom">
         <div class="menu_container">
             <div class="menu_item" onclick="location.href='#home'"><i class="fa fa-home"></i> Home</div>
             <div class="menu_item" onclick="location.href='#about'"><i class="fa fa-briefcase"></i>About Us</div>
             <div class="menu_item" onclick="location.href='#product_services'"><i class="fa fa-ticket"></i>Product &amp; Services</div>
-                            <div class="menu_item" onclick="location.href='#shop_online'"><i class="fa fa-archive"></i>Shop</div>
-                        <div class="menu_item" onclick="location.href='#gallery'"><i class="fa fa-image"></i>Gallery</div>
+            <div class="menu_item" onclick="location.href='#shop_online'"><i class="fa fa-archive"></i>Shop</div>
+            <div class="menu_item" onclick="location.href='#gallery'"><i class="fa fa-image"></i>Gallery</div>
             <div class="menu_item" onclick="location.href='#youtube'"><i class="fa fa-video-camera"></i>Youtube Videos</div>
             <div class="menu_item" onclick="location.href='#payment'"><i class="fa fa-money"></i>Payment</div>
             <div class="menu_item" onclick="location.href='#enquery'"><i class="fa fa-comment"></i>Enquiry</div>
@@ -553,14 +533,12 @@
   </div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-    </script>
 
     
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
@@ -569,97 +547,89 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     -->
 
-<script>
 
-let name = document.ge
+    <script>
+        // Find out the cart items from localStorage
+        
+        if (localStorage.getItem('AddCart') == null) {
+            var cart = {};
+        } else {
+            cart = JSON.parse(localStorage.getItem('AddCart'));
+            updateCart(cart);
+        }
+        // If the add to cart button is clicked, add/increment the item
+        //$('.cart').click(function() {
+        $('.divpr').on('click', 'button.AddCart', function() {
+            var idstr = this.id.toString();
+            if (cart[idstr] != undefined) {
+                qty = cart[idstr][0] + 1;
+                
+            } else {
+                qty = 1;
+                name = document.getElementById('name'+idstr).innerHTML
+                itemPrice = document.getElementById('price'+idstr).innerHTML
 
-
-$(document).ready(()=>{
-    $.ajax({
-           type: "POST",
-           url: "https://eadds.me/card/views/703",
-           data: {}, // serializes the form's elements.
-           success: function(data)
-           {
-                console.log("done!");
-                // alert(data); // show response from the php script.
-                // window.location.reload()
-                // $("form").css("display", "block");
-                // $("#form_status").css("display", "none");
-
-           },
-           error: function (data) {
-               $("#form_status").css("display", "none");
-                console.log('An error occurred.');
-                console.log(data);
-            },
-         });
-
-
-      
-        //   increment decrement qty
-        $(".dec").click(function(){
-            var qtyval = Number($(this).parent().find('input').val());
-            console.log($(this).parent().find('input').val());
-            console.log(qtyval);
-            // let qty = Number($("input").val());
-            if (qtyval>1) {
-                $(this).parent().find('input').val(qtyval-1)
+                cart[idstr] = [qty, name,itemPrice];
+        
             }
-        })
-        $(".inc").click(function(){
-            var qtyval = Number($(this).parent().find('input').val());
-            console.log(qtyval);
-            $(this).parent().find('input').val(qtyval+1)
-        })
-
-})
-
-// this is the id of the form
-$("#contactform").submit(function(e) {
-
-    e.preventDefault(); // avoid to execute the actual submit of the form.
-
-    var form = $(this);
-    var url = form.attr('action');
-    $("form").css("display", "none");
-    $("#form_status").css("display", "block");
-
-    $.ajax({
-           type: "POST",
-           url: url,
-           data: form.serialize(), // serializes the form's elements.
-           success: function(data)
-           {
-                console.log("done!");
-                alert(data); // show response from the php script.
-                window.location.reload()
-                // $("form").css("display", "block");
-                // $("#form_status").css("display", "none");
-
-           },
-           error: function (data) {
-               $("#form_status").css("display", "none");
-                console.log('An error occurred.');
-                console.log(data);
-            },
-         });
-
-    
-});
-
-
- function myNavFunc(){
-    // If it's an iPhone..
-    if( (navigator.platform.indexOf("iPhone") != -1) 
-        || (navigator.platform.indexOf("iPod") != -1)
-        || (navigator.platform.indexOf("iPad") != -1))
-         window.open(`maps://www.google.com/maps/dir/?api=1&travelmode=driving&layer=traffic&destination=Booth No. 66-67, U/E, PH-1 DUGRI LUDHIANA,1995`);
-    else
-         window.open(`https://www.google.com/maps/dir/?api=1&travelmode=driving&layer=traffic&destination=Booth No. 66-67, U/E, PH-1 DUGRI LUDHIANA,1995`);
-    }
-
-
+            updateCart(cart);
+        });
+        //Add Popover to cart
+        $('#popcart').popover();
+        updatePopover(cart);
+        
+        function updatePopover(cart) {
+            console.log('We are inside updatePopover');
+            var popStr = "";
+            popStr = popStr + "<h5> Cart for your items in my shopping cart </h5><div class='mx-2 my-2'>";
+            var i = 1;
+            for (var item in cart) {
+                popStr = popStr + "<b>" + i + "</b>. ";
+                popStr = popStr + document.getElementById('name' + item).innerHTML.slice(0, 19) + "... Qty: " + cart[item][0] + '<br>';
+                i = i + 1;
+            }
+            popStr = popStr + "</div> <a href='/kaddapp/checkout'><button class='btn btn-primary' id ='checkout'>Checkout</button></a> <button class='btn btn-primary' onclick='clearCart()' id ='clearCart'>Clear Cart</button>     "
+            console.log(popStr);
+        
+            document.getElementById('popcart').setAttribute('data-content', popStr);
+            $('#popcart').popover('show');
+        }
+        
+        function clearCart() {
+            cart = JSON.parse(localStorage.getItem('AddCart'));
+            for (var item in cart) {
+                document.getElementById('div' + item).innerHTML = '<button id="' + item + '" class="AddCart">Add To Cart</button>'
+            }
+            localStorage.clear();
+            cart = {};
+            updateCart(cart);
+        }
+        
+        function updateCart(cart) {
+            var sum = 0;
+            for (var item in cart) {
+                sum = sum + cart[item][0];
+                document.getElementById('div' + item).innerHTML = "<button id='minus" + item + "' class='btn btn-primary minus'>-</button> <span id='val" + item + "''>" + cart[item][0] + "</span> <button id='plus" + item + "' class='btn btn-primary plus'> + </button>";
+            }
+            localStorage.setItem('AddCart', JSON.stringify(cart));
+            document.getElementById('AddCart').innerHTML = sum;
+            console.log(cart);
+            updatePopover(cart);
+        }
+        // If plus or minus button is clicked, change the cart as well as the display value
+        $('.divpr').on("click", "button.minus", function() {
+            a = this.id.slice(7, );
+            cart['pr' + a][0] = cart['pr' + a][0] - 1;
+            cart['pr' + a][0] = Math.max(0, cart['pr' + a][0]);
+            document.getElementById('valpr' + a).innerHTML = cart['pr' + a][0];
+            updateCart(cart);
+        });
+        $('.divpr').on("click", "button.plus", function() {
+            a = this.id.slice(6, );
+            cart['pr' + a][0] = cart['pr' + a][0] + 1;
+            document.getElementById('valpr' + a).innerHTML = cart['pr' + a][0];
+            updateCart(cart);
+        });
 </script>
 
 </body>
