@@ -6,10 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{cardd.company_name}}</title>
-    <link rel = "styl esheet" href = "{% static 'css/Jwellerytheme15.css">
+    <link rel="stylesheet" href="{% static 'css/Jwellerytheme15.css'%}">
     <script src="https://kit.fontawesome.com/25320ceca9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <style>
+        .addtocartdiv {
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .dec:focus,
+        .inc:focus {
+            outline: none;
+        }
+        
+        a.cart-round-button {
+            position: fixed;
+            bottom: 76px;
+            right: 10px;
+            display: block;
+            width: 60px;
+            height: 60px;
+            line-height: 52px;
+            border: 5px solid #fff;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            background: #d657ec;
+            box-shadow: 0 0 3px grey;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+    </style>
 </head>
 
 <body>
@@ -34,9 +64,9 @@
         <div class = "Container">
        
             <div class = "intro" > 
-            <img class = "intro_image" src = "/media/{{cardd.logo_image}}" alt  = "" style = " height : 700px;
+            <img class = "intro_image" src = "/media/{{cardd.logo_image}}" alt  = "" style = " height : 100%;
         width: 100%; right: 10%">
-        <img class = "intro_image" src = "./image/firstlo1.jpg" alt  = "" style = " height : 100%;
+        <img class = "intro_image" src = "/media/{{cardd.logo_image}}" alt  = "" style = " height : 100%;
         width: 400px; left: 70%;" >
         
     </div>
@@ -84,8 +114,8 @@
        <div class = "p-box">
            <img src = "/media/{{productd.product_image}}">
            <p id="namepr1">{{productd.product_name}}</p>
-           <a href="#" class = "price"> ₹<span id="pricepr1">{{productd.mrp}}</span></a>
-           <span id="divpr1" class="divpr">
+           <h5 href="#" class = "price"> ₹<span id="pricepr1">{{productd.mrp}}</span></h5>
+           <span id="divpr1" class="divpr" style=" display : flex;">
            <button href="#" id= "pr1" class = "Cart">Add To Cart</button></span>
        </div>
 
@@ -93,24 +123,24 @@
        <div class = "p-box">
         <img src = "/media/{{productd.product_image2}}">
         <p  id="namepr2">{{productd.product_name2}}</p>
-        <a href="#" class = "price"> ₹<span id="pricepr2">{{productd.mrp2}}</span></a>
-        <span id="divpr2" class="divpr">
+        <h5 href="#" class = "price"> ₹<span id="pricepr2">{{productd.mrp2}}</span></h5>
+        <span id="divpr2" class="divpr" style=" display : flex;">
         <button href="#" id= "pr2" class = "Cart">Add To Cart</button></span>
     </div>
 
     <div class = "p-box">
         <img src = "/media/{{productd.product_image3}}">
         <p id="namepr3">{{productd.product_name3}}</p>
-        <a href="#" class = "price"> ₹<span id="pricepr3">{{productd.mrp3}}</span></a>
-        <span id="divpr3" class="divpr">
+        <h5 href="#" class = "price"> ₹<span id="pricepr3">{{productd.mrp3}}</span></h5>
+        <span id="divpr3" class="divpr" style=" display : flex;">
         <button href="#" id= "pr3" class = "Cart">Add To Cart</button></span>
     </div>
 
     <div class = "p-box">
         <img src = "/media/{{productd.product_image4}}">
         <p id="namepr4">{{productd.product_name4}} </p>
-        <a href="#" class = "price"> ₹<span id="pricepr4">{{productd.mrp4}}</span></a>
-        <span id="divpr4" class="divpr">
+        <h5 href="#" class = "price"> ₹<span id="pricepr4">{{productd.mrp4}}</span></h5>
+        <span id="divpr4" class="divpr" style=" display : flex;">
         <button href="#" id= "pr4" class = "Cart">Add To Cart</button></span>
     </div>
 
@@ -122,14 +152,14 @@
 
 <section>
     
-    <div class="Product1"  >
+    <div class="Product"  >
         
   
         <div class="heading"id="payment" >
             <h3 >Payment</h3>
             <div class = "dis" style = "display: flex;">
             <div  class = "Payment">
-                    <img src = " {{paymentd.paytm_num}}" alt = ""   class = "google">
+                <img src = " /media/{{paymentd.paytm_qr}}" alt = ""   class = "google">
                   </div>
 
                   <div class="bank">
@@ -167,39 +197,39 @@
                                         <h3> Gallery </h3>
                                     </div>
                                  
-                                    <div class = "product_container">
-                                        <div class = "p-box">
+                                    <div class = "product_container1">
+                                        <div class = "p-box1">
                                             <img src = "/media/{{galleryd.gallery_image}}">
                                             
                                           
                                         </div>
                                  
                                  
-                                        <div class = "p-box">
+                                        <div class = "p-box1">
                                          <img src = "/media/{{galleryd.gallery_image2}}">
                                         
                                        
                                      </div>
                                  
-                                     <div class = "p-box">
+                                     <div class = "p-box1">
                                          <img src = "/media/{{galleryd.gallery_image3}}">
                                          
                                          
                                      </div>
                                  
-                                     <div class = "p-box">
+                                     <div class = "p-box1">
                                          <img src = "/media/{{galleryd.gallery_image4}}">
                                         
                                      
                                      </div>
                                  
-                                     <div class = "p-box">
+                                     <div class = "p-box1">
                                          <img src = "/media/{{galleryd.gallery_image5}}">
                                         
                                          
                                      </div>
                                  
-                                     <div class = "p-box">
+                                     <div class = "p-box1">
                                          <img src = "/media/{{galleryd.gallery_image6}}">
                                         
                                         
@@ -284,7 +314,7 @@
         </a>-->
         <a type="button" class="cart-round-button" id="popcart"  data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="Your Cart is Empty">
             <i class="fas fa-shopping-cart"></i>
-            <span id="Cart" class="badge badge-light text-dark" style="position: absolute;top: -2px;right: -2px;"></span>
+            <span id="Cart" class="badge badge-light text-dark" style="position: absolute;top: -8px;left: 40px;"></span>
             </a> 
         <!-- <span></span> -->
     </div>
