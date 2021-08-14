@@ -98,7 +98,7 @@
     border-radius: 10px;
 }
 .heading{
-    margin-top: 100px;
+    margin-top: 0px;
     margin: 20px;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
 }
@@ -110,6 +110,15 @@
     font-size: 2rem;
     color: #d500f9;
 }
+
+
+
+.price{
+    color : #d500f9;
+    font-family: poppins;
+    font-size: 1rem;
+    text-decoration: none;
+}
 .product_container{
     display: flex;
     justify-content: center;
@@ -118,31 +127,65 @@
     margin: 10px 0px;
     width: 100%;
 }
+.product_container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+    width: 100%;
+}
 .p-box{
-    width : 250px;
-    height:400px;
+    width : 220px;
+    height:420px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 4px;
     position: relative;
-    margin: 10px 30px;
+    margin: 10px 20px;
+   
+    
+    
+
 }
+.p-box1{
+    width : 420px;
+    height:420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 4px;
+    position: relative;
+    margin: 10px 20px;
+   
+    
+    
+
+}
+.p-box1 img{
+    height: 250px;
+    width: 100%;
+}
+.p-box1:hover{
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    background-color: #FFFFFF;
+
+}
+
 .p-box img{
     height: 250px;
+    width: 100%;
 }
-.p-box p{
+.p-box h5{
     color:#d500f9;
     font-size: 1rem;
     letter-spacing: 0.5px;
 }
-.price{
-    color : #d500f9;
-    font-family: poppins;
-    font-size: 1rem;
-    text-decoration: none;
-}
+
+
 .Cart{
     
     text-decoration: none;
@@ -212,13 +255,13 @@
         
             
             text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-       
-      
             font-weight: 700;
             letter-spacing: 2px;
             text-align: center;
             font-size: 2rem;
             color: #d500f9;
+      
+           
     
 }
 .Product1{
