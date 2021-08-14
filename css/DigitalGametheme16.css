@@ -5,17 +5,14 @@
     display: inline-block;
 }
 
-.container img {
 
-  }
-  
-  /* Position the image container (needed to position the left and right arrows) */
+ 
   .container {
     height : 500px;
 
   }
   
-  /* Hide the images by default */
+
   .mySlides {
     display: none;
     height: 500px;
@@ -187,12 +184,12 @@
     color: black;
 }
 .product_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 10px 0px;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0px;
+  width: 100%;
 }
 .p-box{
     width : 250px;
@@ -205,20 +202,58 @@
     position: relative;
     margin: 10px 30px;
 }
-.p-box img{
-    height: 250px;
-}
-.p-box p{
-    color:black;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-}
+
+
 .price{
     color : black;
     font-family: poppins;
     font-size: 1rem;
     text-decoration: none;
 }
+
+.product_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0px;
+  width: 100%;
+}
+.product_container1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0px;
+  width: 100%;
+}
+.p-box{
+  width : 220px;
+  height:420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4px;
+  position: relative;
+  margin: 10px 20px;
+ }
+
+.p-box h5{
+  color:rgb(158, 70, 70);
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+.price{
+  color : #4d4d4d70;
+  font-family: poppins;
+  font-size: 1rem;
+  text-decoration: none;
+
+}
+
+
+
 .Cart{
     
     text-decoration: none;
@@ -297,9 +332,8 @@
             color: black;
     
 }
-.Product1{
-    margin-top: 300px;
-}
+
+
 .input-container {
     display: -ms-flexbox; /* IE10 */
     display: flex;
