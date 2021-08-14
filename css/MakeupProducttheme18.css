@@ -195,7 +195,7 @@
     width: 100%;
 }
 .p-box{
-    width : 250px;
+    width : 200px;
     height:400px;
     display: flex;
     justify-content: center;
@@ -205,9 +205,7 @@
     position: relative;
     margin: 10px 30px;
 }
-.p-box img{
-    height: 250px;
-}
+
 
 .price{
     color : black;
@@ -215,6 +213,35 @@
     font-size: 1rem;
     text-decoration: none;
 }
+
+.product_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30px 0px;
+  width: 100%;
+}
+
+.p-box{
+  width : 180px;
+  height:420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4px;
+  position: relative;
+  margin: 10px 20px;
+ }
+
+.p-box h5{
+  color:black;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+
 .Cart{
     
     text-decoration: none;
